@@ -119,8 +119,8 @@ namespace Cartographer_Launcher.Includes.Settings
 		{
 			get
 			{
-				if (!keyValues.ContainsKey(MAP_DOWNLOADING_ENABLE)) return 0;
-				else return int.Parse(keyValues[MAP_DOWNLOADING_ENABLE]);
+				if (!keyValues.ContainsKey(MAP_DOWNLOADING)) return 0;
+				else return int.Parse(keyValues[MAP_DOWNLOADING]);
 			}
 			set { keyValues[MAP_DOWNLOADING_ENABLE] = "" + value; }
 		}
@@ -202,7 +202,7 @@ namespace Cartographer_Launcher.Includes.Settings
 					Methods.RelaunchAsAdmin();
 				}
 				else Methods.DebugAbort("Can't access \"" + Globals.GAME_DIRECTORY + "xlive.ini" + "\" please fix the permissions for this file.");
-                
+
             }
 		}
 
